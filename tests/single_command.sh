@@ -1,24 +1,20 @@
-#!/bin/sh
+#!/bin/bash
 
 #Executing the single command tests
 
 (
-	echo "echo \"mkdir newfile\""
-	echo "mkdir newfile"
+	echo "mkdir newfolder"
 	sleep 1
 
-	echo "echo \"mkdir newfile\""
-	echo "mkdir newfile"
+	echo "touch filename.cpp"
 	sleep 1
 
-	echo "echo \"touch filename\""
-	echo "echo touch filenqme"
-	sleep 1
-
-	echo "echo \"pwd\""
 	echo "pwd"
 	sleep 1
 
-	echo "echo \"ls _l\""
-	echo "ls _l"
-) | ./bin/rshell
+	echo "ls -l"
+	sleep 1
+
+	echo "quit"
+
+) | ../bin/rshell

@@ -63,7 +63,7 @@ int main()
 		gethostname(host, sizeof(host)-1);
 		
 		//print them
-		cout << "[" << user << "@" << host << " ~]$ ";
+		cout << "[" << user << "@" << host << " ~]$ \n";
 		
 		//get what the user entered
 		std::getline(cin, cmd);
@@ -81,7 +81,6 @@ int main()
 		{
 			doCmd(cmd);
 		}
-			
 
 	} while (cmd != "quit");
 
