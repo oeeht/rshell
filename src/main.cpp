@@ -23,7 +23,7 @@ string delComm(string comment)
 		return comment;
 }
 
-//split the commands entered by the user
+//function to split the commands entered by the user
 
 vector<string> split(string command)
 {
@@ -68,7 +68,7 @@ int main()
 		//get what the user entered
 		std::getline(cin, cmd);
 
-		//divide the commands entered
+		//divide the commands entered and execute them with the functions
 		if(cmd.find(';') != string::npos)
 		{	
 			allComm = split(cmd);

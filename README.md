@@ -1,9 +1,7 @@
-Théo CORIN, tcori003 (623701)
-Jérôme MATTA, jmatta008(623700)
+Théo CORIN, tcori003 (623701) and Jérôme MATTA, jmatta008(623700)
 
 RSHELL
 ==============
-
 rshell is an executable that is a basic command shell
 
 Installation
@@ -12,6 +10,7 @@ How to use rshell :
 
 	* git clone https://github.com/oeeht/
 	* cd rshell
+	* git checkout hw1
 	* make
 	* bin/rshell
 
@@ -19,13 +18,13 @@ What it does
 ---------------
 You can execute simple commands such as
 Examples:
-	$ ls -l
-	$ echo "Hello World"
-	$ pwd
+	* ls -l
+	* echo "Hello World"
+	* pwd
 
 You can add comments while typing a command
 Examples:
-	$ echo Hello #This is a comment
+	* echo Hello #This is a comment
 It will not print the "#This is a comment" part
 
 Exit
