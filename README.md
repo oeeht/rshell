@@ -27,6 +27,14 @@ Examples:
 	* echo Hello #This is a comment
 It will not print the "#This is a comment" part
 
+Test command
+---------------
+Examples:
+	* test -e /home
+	* test /home
+	* [ /home ]
+	* [ -e /home ]
+
 Exit
 ---------------
 Supposed to exit by typing "exit" but does not work properly
