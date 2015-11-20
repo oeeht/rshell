@@ -18,6 +18,7 @@ What it does
 ---------------
 You can execute simple commands such as
 Examples:
+
 	* ls -l
 	* echo "Hello World"
 	* pwd
@@ -30,10 +31,11 @@ It will not print the "#This is a comment" part
 Test command
 ---------------
 Examples:
-	* test -e /home
-	* test /home
-	* [ /home ]
-	* [ -e /home ]
+* test -e /home
+* test /home
+* [ /home ]
+* [ -e /home ]
+
 
 Exit
 ---------------
