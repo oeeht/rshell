@@ -45,16 +45,114 @@ vector<string> split(string command)
 //function to execute a command
 void doCmd(string cmd)
 {
-	system(cmd.c_str());
+if (cmd != "exit")
+{
+	if((cmd.find("[") != string::npos) || (cmd.find("test") != string::npos))
+		{
+			cout << "It's a test" << endl;
+
+			if ((cmd.find("-e") != string::npos) || (cmd.find("-f") != string::npos) || (cmd.find("-d") != string::npos))
+				{
+					if (cmd.find("-f") != string::npos)
+						{
+							int testing = system(cmd.c_str());
+							if (testing == 0)
+								{
+									cout << "FILE EXISTS" << endl;
+								}
+							else
+								{
+									cout << "NOT A FILE OR DOES NOT EXIST" << endl;
+
+								}
+
+						}
+
+						if (cmd.find("-d") != string::npos)
+						{
+							int testing = system(cmd.c_str());
+							if (testing == 0)
+								{
+									cout << "DIRECTORY EXISTS" << endl;
+								}
+							else
+								{
+									cout << "NOT A DIRECTORY OR DOES NOT EXIST" << endl;
+
+								}
+
+						}
+						if (cmd.find("-e") != string::npos)
+						{
+							int testing = system(cmd.c_str());
+							if (testing == 0)
+								{
+									cout << "FILE OR DIRECTORY EXISTS" << endl;
+								}
+							else
+								{
+									cout << "FILE OR DIRECTORY DOESNT NOT EXIST" << endl;
+
+								}
+						}
+					
+				}
+			else
+				{
+					size_t bracket = 2;
+					size_t test = 5;
+					string flag = "-e ";
+
+					if (cmd.find("[") != string::npos)
+						{
+							string new_cmd;
+							new_cmd = cmd.insert(bracket, flag);
+							int testing = system(new_cmd.c_str());
+							if (testing == 0)
+								{
+									cout << "FILE OR DIRECTORY EXISTS" << endl;
+								}
+							else
+								{
+									cout << "FILE OR DIRECTORY DOESNT NOT EXIST" << endl;
+
+								}
+						}
+				
+					else if (cmd.find("test") != string::npos)
+						{
+							string new_cmd;
+							new_cmd = cmd.insert(test, flag);
+							int testing = system(new_cmd.c_str());
+							if (testing == 0)
+								{
+									cout << "FILE OR DIRECTORY EXISTS" << endl;
+								}
+							else
+								{
+									cout << "FILE OR DIRECTORY DOESNT NOT EXIST" << endl;
+
+								}
+						}
+				}
+
+			}
+
+		else
+		{
+			system(cmd.c_str());
+		}
+}
+
 }
 
 int main()
 {
 	string cmd;
 	vector<string> allComm;
-	cout << "\n== TYPE YOUR COMMANDS ==\n'quit' to exit\n" << endl;
+	cout << "\n== TYPE YOUR COMMANDS ==\n'exit' to quit\n" << endl;
 
-	do
+	while (cmd != "exit")
 	{	
 		//get the user username and hostname
 		char user[100];
@@ -82,7 +180,7 @@ int main()
 			doCmd(cmd);
 		}
 
-	} while (cmd != "quit");
+	} 
 
 	return 0;
 }
