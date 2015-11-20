@@ -48,3 +48,5 @@ Most of the times the program doesn't recognize the command "exit" to quit the p
 YOU HAVE TO END YOUR LINE WITH A ';' WHEN YOU WRITE MULTIPLE COMMANDS
 There are some problems while executing the test scripts.
 You cannot write a comment after the first command while doing a multiple commands, you have to add the comments at the end.
+
+Does not support if you write "[/home]: without spaces.
